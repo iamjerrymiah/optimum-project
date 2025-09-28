@@ -139,7 +139,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onPageChange }) => {
               <h3 className="font-semibold text-gray-900 mb-2">Contact Us</h3>
               <p className="text-gray-600 text-sm mb-4">Have questions? Get in touch with our support team.</p>
               <button
-                onClick={() => onPageChange('contact')}
+                onClick={() => {window.Tawk_API.maximize()}}
                 className="bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors duration-200"
               >
                 Contact

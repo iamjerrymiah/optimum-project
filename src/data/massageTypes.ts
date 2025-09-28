@@ -1,5 +1,16 @@
 import { MassageType } from '../types';
 
+import nuruMasage from '../assets/nuru.jpg'
+import xxxImage from '../assets/happy_ending.jpg'
+import coupleImage from '../assets/couples-massages.jpg'
+import shiatsuMassage from '../assets/massage-Shiatsu.jpg'
+import hotStoneImage from '../assets/hot-stone.jpg'
+import triggerPoint from '../assets/trigger-point.webp'
+import sportMassge from '../assets/sport-massage.jpeg'
+import deepTissue from '../assets/deep-tissue-massage.jpg'
+import swedishMassage from '../assets/swedish-massage.jpg'
+import reflexologyMassage from '../assets/facial-refelxology.jpg'
+
 export const massageTypes: MassageType[] = [
   {
     id: 'swedish',
@@ -9,7 +20,7 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       60: { min: 130, max: 150 }
     },
-    image: 'https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: swedishMassage,
     benefits: ['Stress relief', 'Improved circulation', 'Muscle relaxation', 'Better sleep']
   },
   {
@@ -20,7 +31,7 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       90: { min: 160, max: 200 }
     },
-    image: 'https://images.pexels.com/photos/6663050/pexels-photo-6663050.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: deepTissue,
     benefits: ['Pain relief', 'Injury recovery', 'Improved mobility', 'Tension release']
   },
   {
@@ -31,7 +42,7 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       60: { min: 180, max: 250 },
     },
-    image: 'https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: nuruMasage,
     benefits: ['Increased flexibility', 'Energy balance', 'Stress reduction', 'Improved posture']
   },
   {
@@ -42,7 +53,7 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       60: { min: 120, max: 150 }
     },
-    image: 'https://images.pexels.com/photos/3865792/pexels-photo-3865792.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: reflexologyMassage,
     benefits: ['Aromatherapy benefits', 'Deep relaxation', 'Mood enhancement', 'Skin nourishment']
   },
   {
@@ -53,7 +64,7 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       60: { min: 120, max: 150 },
     },
-    image: 'https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: sportMassge,
     benefits: ['Injury prevention', 'Performance enhancement', 'Faster recovery', 'Flexibility improvement']
   },
   {
@@ -64,7 +75,7 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       60: { min: 130, max: 150 },
     },
-    image: 'https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: triggerPoint,
     benefits: ['Injury prevention', 'Performance enhancement', 'Faster recovery', 'Flexibility improvement']
   },
   {
@@ -75,7 +86,7 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       90: { min: 150, max: 200 },
     },
-    image: 'https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: hotStoneImage,
     benefits: ['Injury prevention', 'Performance enhancement', 'Faster recovery', 'Flexibility improvement']
   },
   {
@@ -86,7 +97,7 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       90: { min: 120, max: 150 },
     },
-    image: 'https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: shiatsuMassage,
     benefits: ['Injury prevention', 'Performance enhancement', 'Faster recovery', 'Flexibility improvement']
   },
   {
@@ -97,7 +108,18 @@ export const massageTypes: MassageType[] = [
     priceRanges: {
       120: { min: 300, max: 500 },
     },
-    image: 'https://images.pexels.com/photos/7176325/pexels-photo-7176325.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: coupleImage,
+    benefits: ['Injury prevention', 'Performance enhancement', 'Faster recovery', 'Flexibility improvement']
+  },
+  {
+    id: 'happy-ending',
+    name: 'XXX massage(Happy Ending)',
+    description: 'Happy ending is a colloquial term for the practice of a provider offering sexual release to a client.',
+    durations: [120],
+    priceRanges: {
+      120: { min: 300, max: 500 },
+    },
+    image: xxxImage,
     benefits: ['Injury prevention', 'Performance enhancement', 'Faster recovery', 'Flexibility improvement']
   }
 ];

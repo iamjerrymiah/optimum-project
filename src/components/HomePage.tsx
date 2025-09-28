@@ -2,7 +2,6 @@ import React from 'react';
 import { Star, ArrowRight, Heart, Shield, Clock, Users } from 'lucide-react';
 import { massageTypes } from '../data/massageTypes';
 import { masseuses } from '../data/masseuses';
-import { MassageType, Masseuse } from '../types';
 import MasseusesPage from './MasseusesPage';
 import FAQPage from './FAQPage';
 import AboutPage from './AboutPage';
@@ -161,10 +160,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
             </button>
           </div> */}
 
-          <MassageTypesPage 
-            onPageChange={handlePageChange}
-            onServiceSelect={handleServiceSelect}
-          />
+          <MassageTypesPage  />
         </div>
       </section>
 
@@ -244,7 +240,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
           </p>
           <button
             // onClick={() => onPageChange('booking')}
-            onClick={() => onPageChange('contact')}
+            onClick={() => {window.Tawk_API.maximize()}}
             className="bg-white text-teal-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center"
           >
             {/* Start Booking Process */}

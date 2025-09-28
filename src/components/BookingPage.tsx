@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, ArrowRight, Check, Calendar, Clock, MapPin, DollarSign, User, Phone, Mail } from 'lucide-react';
 import { BookingData, MassageType, Masseuse } from '../types';
 import { massageTypes } from '../data/massageTypes';
-import { masseuses } from '../data/masseuses';
+import { useNavigate } from 'react-router';
+import PrivacyModal from './PrivacyModal';
 
 interface BookingPageProps {
   initialMasseuse?: Masseuse;
@@ -15,9 +16,10 @@ const BookingPage: React.FC<BookingPageProps> = ({
   initialService, 
   onPageChange 
 }) => {
+  const navigate = useNavigate()
   const [currentStep, setCurrentStep] = useState(1);
   const [bookingData, setBookingData] = useState<BookingData>({
-    masseuse: initialMasseuse,
+    // masseuse: initialMasseuse,
     massageType: initialService,
     duration: initialService?.durations[0],
     location: '',
@@ -50,7 +52,7 @@ const BookingPage: React.FC<BookingPageProps> = ({
 
     switch (step) {
       case 1:
-        if (!bookingData.masseuse) newErrors.masseuse = 'Please select a masseuse';
+        // if (!bookingData.masseuse) newErrors.masseuse = 'Please select a masseuse';
         if (!bookingData.massageType) newErrors.massageType = 'Please select a massage type';
         if (!bookingData.duration) newErrors.duration = 'Please select duration';
         break;
@@ -76,9 +78,9 @@ const BookingPage: React.FC<BookingPageProps> = ({
     if (validateStep(currentStep)) {
       if (currentStep < 3) {
         setCurrentStep(currentStep + 1);
-      } else {
-        handleSubmit();
-      }
+      } else if(currentStep === 3){
+        setShowPrivacy(true)
+      } 
     }
   };
 
@@ -86,14 +88,54 @@ const BookingPage: React.FC<BookingPageProps> = ({
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
     } else {
-      onPageChange('home');
+      navigate("/");
     }
   };
 
-  const handleSubmit = () => {
-    console.log('Booking submitted:', bookingData);
-    setIsSubmitted(true);
-  };
+  const [showPrivacy, setShowPrivacy] = useState(false);
+const [bookingMessage, setBookingMessage] = useState<string | null>(null);
+
+const handleSubmit = () => {
+  console.log("Booking submitted:", bookingData);
+
+  if (window?.Tawk_API) {
+    // Attach customer info
+    window.Tawk_API.setAttributes(
+      {
+        name: bookingData.customerName,
+        email: bookingData.customerEmail,
+        phone: bookingData.customerPhone,
+      },
+      (err: any) => {
+        if (err) console.error("Tawk.to attributes error:", err);
+      }
+    );
+
+    // Build booking summary (user will send manually)
+    const message = `
+New Booking Request:
+- Service: ${bookingData.massageType?.name}
+- Duration: ${bookingData.duration} minutes
+- Date: ${bookingData.preferredDate} at ${bookingData.preferredTime}
+- Location: ${bookingData.location}
+- Offer: $${bookingData.customOffer}
+- Special Requests: ${bookingData.specialRequests || "None"}
+- Name: ${bookingData.customerName}
+- Phone: ${bookingData.customerPhone}
+- Email: ${bookingData.customerEmail}
+    `.trim();
+
+    setBookingMessage(message); // show summary in UI
+    // setShowPrivacy(true)
+    
+    // Open chat window
+    window.Tawk_API.maximize();
+  }
+
+  // Reset form
+  setIsSubmitted(true);
+};
+
 
   const updateBookingData = (updates: Partial<BookingData>) => {
     setBookingData(prev => ({ ...prev, ...updates }));
@@ -114,16 +156,12 @@ const BookingPage: React.FC<BookingPageProps> = ({
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Booking Confirmed!</h1>
           <p className="text-lg text-gray-600 mb-6">
-            Thank you for your booking request. Your chosen masseuse will contact you within 2-4 hours to confirm the appointment details.
+            Thank you for your booking request. Zentouch will contact you in the soonest on our live chat to confirm the appointment details.
           </p>
           
-          <div className="bg-gray-50 rounded-lg p-6 mb-6 text-left">
+          {/* <div className="bg-gray-50 rounded-lg p-6 mb-6 text-left">
             <h3 className="font-semibold text-gray-900 mb-4">Booking Summary:</h3>
             <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Masseuse:</span>
-                <span className="font-medium">{bookingData.masseuse?.name}</span>
-              </div>
               <div className="flex justify-between">
                 <span>Service:</span>
                 <span className="font-medium">{bookingData.massageType?.name}</span>
@@ -145,42 +183,38 @@ const BookingPage: React.FC<BookingPageProps> = ({
                 <span>${bookingData.customOffer.toLocaleString()}</span>
               </div>
             </div>
-          </div>
-
+          </div> */}
+          <pre style={{ whiteSpace: "pre-wrap", fontSize: "14px", marginBottom: '30px' }}>{bookingMessage}</pre>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => onPageChange('home')}
+              onClick={() => navigate('/')}
               className="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
             >
               Back to Home
             </button>
             <button
-              onClick={() => {
-                setIsSubmitted(false);
-                setCurrentStep(1);
-                setBookingData({
-                  location: '',
-                  preferredDate: '',
-                  preferredTime: '',
-                  customOffer: 0,
-                  customerName: '',
-                  customerPhone: '',
-                  customerEmail: '',
-                  specialRequests: ''
-                });
-              }}
               className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors duration-200"
+              onClick={() => {
+                navigator.clipboard.writeText(bookingMessage);
+                alert("Booking details copied! Paste it into the live chat to get instant reply.");
+              }}
             >
-              Book Another Session
+              Copy & Send to Chat
             </button>
           </div>
         </div>
+        
       </div>
     );
   }
 
   return (
     <div className="min-h-screen py-12 px-4 bg-gray-50">
+      <PrivacyModal
+        isOpen={showPrivacy}
+        onClose={() => setShowPrivacy(false)}
+        onAgree={() => handleSubmit()}
+      />
       <div className="max-w-4xl mx-auto">
         {/* Progress Bar */}
         <div className="mb-8">
@@ -270,7 +304,7 @@ const BookingPage: React.FC<BookingPageProps> = ({
               )}
 
               {/* Masseuse Selection */}
-              <div>
+              {/* <div>
                 <label className="block text-sm font-semibold text-gray-900 mb-3">Choose Your Masseuse</label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {masseuses.filter(m => m.isAvailable).map((masseuse) => (
@@ -298,7 +332,7 @@ const BookingPage: React.FC<BookingPageProps> = ({
                   ))}
                 </div>
                 {errors.masseuse && <p className="text-red-600 text-sm mt-1">{errors.masseuse}</p>}
-              </div>
+              </div> */}
             </div>
           )}
 
@@ -377,10 +411,7 @@ const BookingPage: React.FC<BookingPageProps> = ({
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
                 {bookingData.massageType && bookingData.duration && (
-                  <p className="text-sm text-gray-600 mt-1">
-                    Typical range: ${bookingData.massageType.priceRanges[bookingData.duration]?.min.toLocaleString()} - 
-                    ${bookingData.massageType.priceRanges[bookingData.duration]?.max.toLocaleString()}
-                  </p>
+                  <p className="text-sm text-gray-600 mt-1">Typical range: $120 - $2000 </p>
                 )}
                 {errors.customOffer && <p className="text-red-600 text-sm mt-1">{errors.customOffer}</p>}
               </div>

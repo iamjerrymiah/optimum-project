@@ -52,41 +52,6 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           </div>
         </div> */}
 
-        {/* Mission & Values */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-            <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Heart className="h-8 w-8 text-teal-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
-            <p className="text-gray-600 leading-relaxed">
-              To democratize wellness by making professional massage therapy accessible, 
-              convenient, and personalized for everyone, wherever they are.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Shield className="h-8 w-8 text-purple-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Promise</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Every masseuse in our network is thoroughly vetted, licensed, and committed 
-              to providing exceptional service with the highest standards of professionalism.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-            <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Users className="h-8 w-8 text-yellow-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Community</h3>
-            <p className="text-gray-600 leading-relaxed">
-              We've built a trusted community of wellness professionals and satisfied clients 
-              who value quality, convenience, and personalized care.
-            </p>
-          </div>
-        </div>
 
         {/* Key Features */}
         <div className="bg-gradient-to-br from-teal-50 to-purple-50 rounded-2xl p-8 lg:p-12 mb-16">
@@ -185,6 +150,42 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
             </div>
           </div>
         </div>
+
+        {/* Mission & Values */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+            <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Heart className="h-8 w-8 text-teal-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
+            <p className="text-gray-600 leading-relaxed">
+              To democratize wellness by making professional massage therapy accessible. To safe keep client $donation and masseuses safety.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Shield className="h-8 w-8 text-purple-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Promise</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Every masseuse in our network is thoroughly vetted, licensed, and committed 
+              to providing exceptional service with the highest standards of professionalism.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+            <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Users className="h-8 w-8 text-yellow-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Community</h3>
+            <p className="text-gray-600 leading-relaxed">
+              We've built a trusted community of wellness professionals and satisfied clients 
+              who value quality, convenience, and personalized care.
+            </p>
+          </div>
+        </div>
+
 
         {/* <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Meet Our Leadership</h2>
