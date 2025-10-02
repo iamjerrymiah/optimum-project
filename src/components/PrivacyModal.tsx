@@ -41,14 +41,14 @@ const PrivacyModal: React.FC<PrivacyModalProps> = ({
             <li>No molestation or sexual abuse is tolerated.</li>
             <li>Anything goes for the hours employed.</li>
             <li>
-              A pre-payment is required: at least half upfront to secure our
+              A pre-payment is required: at least half upfront to secure your
               meeting.
             </li>
             <li>
               Straight to business — no jokes, pranks, or time-wasting.
             </li>
             <li>
-              Reservations are mandatory for first-time meetings to ensure
+              Reservations are mandatory for first timers meetings to ensure
               smooth arrangements.
             </li>
           </ol>

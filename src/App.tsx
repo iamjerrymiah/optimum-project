@@ -10,6 +10,7 @@ import BookingPage from "./components/BookingPage";
 // import FAQPage from "./components/FAQPage";
 // import ContactPage from "./components/ContactPage";
 import { MassageType, Masseuse } from "./types";
+import BookModel from "./components/BookModel";
 
 // Wrapper for booking page so we can manage state
 function BookingWrapper({
@@ -69,15 +70,9 @@ function App() {
               }
             />
             <Route
-              path="/masseuses"
+              path="/book-xxx"
               element={
-                <MasseusesPage
-                  onPageChange={(page:any) => (window.location.href = `/${page}`)}
-                  onMasseuseSelect={(masseuse:any) => {
-                    setSelectedMasseuse(masseuse);
-                    window.location.href = "/booking";
-                  }}
-                />
+                <BookModel />
               }
             />
             <Route

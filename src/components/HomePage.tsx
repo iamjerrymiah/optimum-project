@@ -1,11 +1,12 @@
 import React from 'react';
 import { Star, ArrowRight, Heart, Shield, Clock, Users } from 'lucide-react';
 import { massageTypes } from '../data/massageTypes';
-import { masseuses } from '../data/masseuses';
+import { masseuses, pornstars } from '../data/masseuses';
 import MasseusesPage from './MasseusesPage';
 import FAQPage from './FAQPage';
 import AboutPage from './AboutPage';
 import MassageTypesPage from './MassageTypesPage';
+import { useNavigate } from 'react-router';
 
 interface HomePageProps {
   onPageChange: (page: string) => void;
@@ -16,6 +17,8 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, handleServiceSelect }) => {
   const featuredServices = massageTypes.slice(0, 4);
   const topMasseuses = masseuses.filter(m => m.isAvailable && m.rating >= 4.8).slice(0, 3);
+
+  const navigate = useNavigate()
   
 
   return (
@@ -33,7 +36,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
                 Connect with certified professional masseuses for personalized relaxation and wellness treatments. 
                 Book your perfect massage experience today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              {/* <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
                   onClick={() => onPageChange('booking')}
                   className="bg-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-teal-700 transition-all duration-200 flex items-center justify-center group"
@@ -47,7 +50,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
                 >
                   View Services
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="relative">
               <img 
@@ -119,47 +122,6 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
             </p>
           </div>
           
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {featuredServices.map((service: MassageType) => (
-              <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div className="relative h-40 sm:h-48 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold text-teal-600">
-                    From ${service.priceRanges[60]?.min.toLocaleString() || 'N/A'}
-                  </div>
-                </div>
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">{service.name}</h3>
-                  <p className="text-gray-600 text-sm mb-3 sm:mb-4 line-clamp-3">{service.description}</p>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <span className="text-xs sm:text-sm text-gray-500">
-                      {service.durations.join(', ')} min sessions
-                    </span>
-                    <button
-                      onClick={() => onPageChange('services')}
-                      className="text-teal-600 text-sm font-semibold hover:text-teal-700 transition-colors"
-                    >
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div> */}
-          
-          {/* <div className="text-center mt-10 sm:mt-12">
-            <button
-              onClick={() => onPageChange('services')}
-              className="bg-teal-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
-            >
-              View All Services
-            </button>
-          </div> */}
-
           <MassageTypesPage  />
         </div>
       </section>
@@ -179,72 +141,52 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
 
           <MasseusesPage />
           
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            {topMasseuses.map((masseuse: Masseuse) => (
-              <div key={masseuse.id} className="bg-gray-50 rounded-xl p-5 sm:p-6 text-center hover:bg-gray-100 transition-colors duration-200">
-                <div className="relative inline-block mb-4">
-                  <img 
-                    src={masseuse.photo} 
-                    alt={masseuse.name}
-                    className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-full mx-auto"
-                  />
-                  <div className="absolute -bottom-2 -right-2 bg-green-500 w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-white"></div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">{masseuse.name}</h3>
-                <div className="flex items-center justify-center mb-1 sm:mb-2">
-                  <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                  <span className="ml-1 font-semibold">{masseuse.rating}</span>
-                  <span className="text-gray-500 text-xs sm:text-sm ml-1">({masseuse.reviewCount} reviews)</span>
-                </div>
-                <p className="text-xs sm:text-sm text-gray-600 mb-3">{masseuse.experience} years experience</p>
-                <div className="flex flex-wrap justify-center gap-1 mb-4">
-                  {masseuse.specialties.slice(0, 2).map((specialty) => (
-                    <span key={specialty} className="bg-teal-100 text-teal-700 px-2 py-1 rounded-full text-xs">
-                      {specialty}
-                    </span>
-                  ))}
-                </div>
-                <button
-                  onClick={() => onPageChange('masseuses')}
-                  className="text-teal-600 font-semibold text-sm hover:text-teal-700 transition-colors"
-                >
-                  View Profile
-                </button>
-              </div>
-            ))}
-          </div> */}
-          
-          {/* <div className="text-center mt-10 sm:mt-12">
-            <button
-              onClick={() => onPageChange('masseuses')}
-              className="bg-teal-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
-            >
-              View All Masseuses
-            </button>
-          </div> */}
         </div>
       </section>
 
       <FAQPage />
+
+      <div className='text-center mt-6'>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          XXX-Rated Services
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        {pornstars.slice(0,3).map((masseuse: any) => (
+          <div key={masseuse.id} className="bg-gray-50 rounded-xl p-5 sm:p-6 text-center hover:bg-gray-100 transition-colors duration-200">
+            <div className="relative inline-block mb-4">
+              <img 
+                src={masseuse.photo} 
+                alt={masseuse.name}
+                className="w-40 h-40 sm:w-40 sm:h-40 object-cover rounded-full mx-auto"
+              />
+              {/* <div className="absolute -bottom-2 -right-2 bg-green-500 w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-white"></div> */}
+            </div>
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">{masseuse.name}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+
 
       {/* CTA Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-teal-600 to-purple-600 text-white">
         <div className="max-w-3xl sm:max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
             {/* Ready to Experience Ultimate Relaxation? */}
-            Still Have Questions?
+            Get XXX-clusive treatment?
           </h2>
           <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 opacity-90">
             {/* Book your massage session today and let our professional therapists help you unwind and rejuvenate. */}
-            Our customer support team is here to help with any questions or concerns you may have.
+            Book your favorite model. We provide the best spicy and hot treatments to satisfy your needs😉.
           </p>
           <button
             // onClick={() => onPageChange('booking')}
-            onClick={() => {window.Tawk_API.maximize()}}
+            onClick={() => {navigate('/book-xxx')}}
             className="bg-white text-teal-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center"
           >
             {/* Start Booking Process */}
-            Contact Support
+            Book Now
             <ArrowRight className="ml-2 h-5 w-5" />
           </button>
         </div>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Menu, X, Zap } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
+  const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems:any = [
@@ -86,13 +87,12 @@ const Header: React.FC = () => {
               </NavLink>
             ))}
 
-            <Link
-              to="/booking"
-              onClick={() => setIsMenuOpen(false)}
+            <div
+              onClick={() => navigate("/booking")}
               className="block w-full bg-teal-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-teal-700 transition-colors duration-200"
             >
               Book Now
-            </Link>
+            </div>
           </div>
         </div>
       )}

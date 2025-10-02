@@ -96,7 +96,6 @@ const BookingPage: React.FC<BookingPageProps> = ({
 const [bookingMessage, setBookingMessage] = useState<string | null>(null);
 
 const handleSubmit = () => {
-  console.log("Booking submitted:", bookingData);
 
   if (window?.Tawk_API) {
     // Attach customer info
@@ -113,16 +112,16 @@ const handleSubmit = () => {
 
     // Build booking summary (user will send manually)
     const message = `
-New Booking Request:
-- Service: ${bookingData.massageType?.name}
-- Duration: ${bookingData.duration} minutes
-- Date: ${bookingData.preferredDate} at ${bookingData.preferredTime}
-- Location: ${bookingData.location}
-- Offer: $${bookingData.customOffer}
-- Special Requests: ${bookingData.specialRequests || "None"}
-- Name: ${bookingData.customerName}
-- Phone: ${bookingData.customerPhone}
-- Email: ${bookingData.customerEmail}
+    New Booking Request:
+    - Service: ${bookingData.massageType?.name}
+    - Duration: ${bookingData.duration} minutes
+    - Date: ${bookingData.preferredDate} at ${bookingData.preferredTime}
+    - Location: ${bookingData.location}
+    - Offer: $${bookingData.customOffer}
+    - Special Requests: ${bookingData.specialRequests || "None"}
+    - Name: ${bookingData.customerName}
+    - Phone: ${bookingData.customerPhone}
+    - Email: ${bookingData.customerEmail}
     `.trim();
 
     setBookingMessage(message); // show summary in UI
