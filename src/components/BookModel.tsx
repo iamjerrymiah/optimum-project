@@ -11,7 +11,7 @@ interface MasseusesPageProps {
 
 const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
   const navigate = useNavigate()
-    const [data, setData] = useState<any>({
+    const [data, setData] = useState({
       name: '',
       modelName: '',
       number: '',
@@ -189,7 +189,8 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
             
             <button
               onClick={()=> {setShowPrivacy(true)}}
-              className="flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+              disabled={!data.name || !data.modelName || !data.number || !data.customOffer}
+              className="flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold disabled:bg-teal-200 hover:bg-teal-700 transition-colors duration-200"
             >
               {'Confirm Book'}
               <ArrowRight className="h-4 w-4 ml-2" />

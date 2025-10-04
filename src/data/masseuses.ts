@@ -12,11 +12,16 @@ import barbie from '../assets/barbie.jpg'
 import lotusbomb from '../assets/lotusbombb.jpg'
 import courtney from '../assets/courtney.jpg'
 
+import masseuse1 from '../assets/masseus1.jpg'
+import masseus2 from '../assets/masseus2.jpg'
+import masseus3 from '../assets/masseus3.jpg'
+
 export const masseuses: Masseuse[] = [
   {
     id: '2',
-    name: 'Sarah Johnson',
-    photo: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400',
+    name: 'Sarah',
+    // photo: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400',
+    photo: masseuse1,
     bio: 'Traditional Thai massage master with over 10 years of experience. Trained in Bangkok and specializes in authentic Thai massage techniques and sports therapy.',
     experience: 10,
     specialties: ['Thai', 'Sports', 'Deep Tissue'],
@@ -28,8 +33,9 @@ export const masseuses: Masseuse[] = [
   },
   {
     id: '3',
-    name: 'Emily Rodriguez',
-    photo: 'https://images.pexels.com/photos/4173258/pexels-photo-4173258.jpeg?auto=compress&cs=tinysrgb&w=400',
+    name: 'Emily',
+    // photo: 'https://images.pexels.com/photos/4173258/pexels-photo-4173258.jpeg?auto=compress&cs=tinysrgb&w=400',
+    photo: masseus2,
     bio: 'Holistic wellness practitioner combining massage therapy with aromatherapy expertise. Specializes in stress relief and relaxation techniques for busy professionals.',
     experience: 6,
     specialties: ['Aromatherapy', 'Swedish', 'Stress Relief'],
@@ -41,8 +47,9 @@ export const masseuses: Masseuse[] = [
   },
   {
     id: '5',
-    name: 'Lisa Park',
-    photo: 'https://images.pexels.com/photos/4173240/pexels-photo-4173240.jpeg?auto=compress&cs=tinysrgb&w=400',
+    name: 'Lisa',
+    // photo: 'https://images.pexels.com/photos/4173240/pexels-photo-4173240.jpeg?auto=compress&cs=tinysrgb&w=400',
+    photo: masseus3,
     bio: 'Experienced massage therapist specializing in relaxation and therapeutic massage. Known for her gentle touch and ability to create a peaceful, healing environment.',
     experience: 5,
     specialties: ['Swedish', 'Aromatherapy', 'Prenatal'],

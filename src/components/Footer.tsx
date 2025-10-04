@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-300">
-              © 2025 ZenTouch. All rights reserved.
+              © 2020 ZenTouch. All rights reserved.
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {/* <div onClick={() => setShowPrivacy(true)} className="text-sm text-gray-300 hover:text-teal-400 transition-colors">Privacy Policy</div> */}

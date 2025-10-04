@@ -133,7 +133,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-teal-400 mb-2">500+</div>
+              <div className="text-4xl font-bold text-teal-400 mb-2">5000+</div>
               <div className="text-gray-300">Happy Clients</div>
             </div>
             <div>
@@ -141,7 +141,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
               <div className="text-gray-300">Professional Therapists</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">5000+</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">15000+</div>
               <div className="text-gray-300">Sessions Completed</div>
             </div>
             <div>

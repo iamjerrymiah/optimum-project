@@ -14,7 +14,7 @@ interface HomePageProps {
   handleServiceSelect?: any;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, handleServiceSelect }) => {
+const HomePage: React.FC<HomePageProps> = ({  }) => {
   const featuredServices = massageTypes.slice(0, 4);
   const topMasseuses = masseuses.filter(m => m.isAvailable && m.rating >= 4.8).slice(0, 3);
 
@@ -36,21 +36,21 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
                 Connect with certified professional masseuses for personalized relaxation and wellness treatments. 
                 Book your perfect massage experience today.
               </p>
-              {/* <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
-                  onClick={() => onPageChange('booking')}
+                  onClick={() => navigate('/booking')}
                   className="bg-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-teal-700 transition-all duration-200 flex items-center justify-center group"
                 >
                   Book Now
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button
-                  onClick={() => onPageChange('services')}
+                  onClick={() => navigate('/book-xxx')}
                   className="border-2 border-teal-600 text-teal-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-all duration-200"
                 >
                   View Services
                 </button>
-              </div> */}
+              </div>
             </div>
             <div className="relative">
               <img 
@@ -106,11 +106,6 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
         </div>
       </section>
 
-      
-      <AboutPage />
-
-
-      {/* Featured Services Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-12">
@@ -126,25 +121,6 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
         </div>
       </section>
 
-
-      {/* Top Masseuses Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Top-Rated Masseuses
-            </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto">
-              Meet our highly-rated massage therapists who are ready to provide exceptional service
-            </p>
-          </div>
-
-          <MasseusesPage />
-          
-        </div>
-      </section>
-
-      <FAQPage />
 
       <div className='text-center mt-6'>
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
@@ -168,8 +144,6 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
       </div>
     </div>
 
-
-      {/* CTA Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-teal-600 to-purple-600 text-white">
         <div className="max-w-3xl sm:max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
@@ -191,6 +165,28 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, handlePageChange, han
           </button>
         </div>
       </section>
+
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Top-Rated Masseuses
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto">
+              Meet our highly-rated massage therapists who are ready to provide exceptional service
+            </p>
+          </div>
+
+          <MasseusesPage />
+          
+        </div>
+      </section>
+
+      
+      <AboutPage />
+
+      <FAQPage />
+
     </div>
   );
 };

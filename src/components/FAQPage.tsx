@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Search, MessageCircle } from 'lucide-react';
 import { faqItems } from '../data/faq';
 import { FAQItem } from '../types';
+import { useNavigate } from 'react-router';
 
 interface FAQPageProps {
   onPageChange?: any;
 }
 
-const FAQPage: React.FC<FAQPageProps> = ({ onPageChange }) => {
+const FAQPage: React.FC<FAQPageProps> = ({ }) => {
+
+  const navigate = useNavigate()
+  
   const [openItems, setOpenItems] = useState<Set<number>>(new Set([0])); // First item open by default
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -111,7 +115,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onPageChange }) => {
               <h3 className="font-semibold text-gray-900 mb-2">Start Booking</h3>
               <p className="text-gray-600 text-sm mb-4">Ready to book your massage? Start the booking process now.</p>
               <button
-                onClick={() => onPageChange('booking')}
+                onClick={() => navigate('/booking')}
                 className="bg-teal-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-200"
               >
                 Book Now
@@ -125,7 +129,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onPageChange }) => {
               <h3 className="font-semibold text-gray-900 mb-2">Browse Services</h3>
               <p className="text-gray-600 text-sm mb-4">Explore our comprehensive massage service offerings.</p>
               <button
-                onClick={() => onPageChange('services')}
+                onClick={() => navigate('/book-xxx')}
                 className="bg-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-purple-700 transition-colors duration-200"
               >
                 View Services
