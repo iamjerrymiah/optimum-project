@@ -177,7 +177,7 @@ const handleSubmit = () => {
                 <span>Location:</span>
                 <span className="font-medium">{bookingData.location}</span>
               </div>
-              <div className="flex justify-between font-semibold text-teal-600">
+              <div className="flex justify-between font-semibold text-yellow-600">
                 <span>Your Offer:</span>
                 <span>${bookingData.customOffer.toLocaleString()}</span>
               </div>
@@ -187,12 +187,12 @@ const handleSubmit = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => navigate('/')}
-              className="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+              className="bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-200"
             >
               Back to Home
             </button>
             <button
-              className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors duration-200"
+              className="border-2 border-yellow-600 text-yellow-600 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-600 hover:text-white transition-colors duration-200"
               onClick={() => {
                 navigator.clipboard.writeText(bookingMessage);
                 alert("Booking details copied! Paste it into the live chat to get instant reply.");
@@ -221,26 +221,26 @@ const handleSubmit = () => {
             {[1, 2, 3].map((step) => (
               <React.Fragment key={step}>
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold ${
-                  step <= currentStep ? 'bg-teal-600 text-white' : 'bg-gray-300 text-gray-600'
+                  step <= currentStep ? 'bg-yellow-600 text-white' : 'bg-gray-300 text-gray-600'
                 }`}>
                   {step < currentStep ? <Check className="h-5 w-5" /> : step}
                 </div>
                 {step < 3 && (
                   <div className={`w-16 h-1 mx-2 ${
-                    step < currentStep ? 'bg-teal-600' : 'bg-gray-300'
+                    step < currentStep ? 'bg-yellow-600' : 'bg-gray-300'
                   }`} />
                 )}
               </React.Fragment>
             ))}
           </div>
           <div className="flex justify-center space-x-8 text-sm">
-            <span className={currentStep >= 1 ? 'text-teal-600 font-semibold' : 'text-gray-500'}>
+            <span className={currentStep >= 1 ? 'text-yellow-600 font-semibold' : 'text-gray-500'}>
               Service & Masseuse
             </span>
-            <span className={currentStep >= 2 ? 'text-teal-600 font-semibold' : 'text-gray-500'}>
+            <span className={currentStep >= 2 ? 'text-yellow-600 font-semibold' : 'text-gray-500'}>
               Details & Pricing
             </span>
-            <span className={currentStep >= 3 ? 'text-teal-600 font-semibold' : 'text-gray-500'}>
+            <span className={currentStep >= 3 ? 'text-yellow-600 font-semibold' : 'text-gray-500'}>
               Contact Info
             </span>
           </div>
@@ -267,8 +267,8 @@ const handleSubmit = () => {
                       }}
                       className={`border-2 rounded-lg p-4 cursor-pointer transition-all duration-200 ${
                         bookingData.massageType?.id === service.id
-                          ? 'border-teal-600 bg-teal-50'
-                          : 'border-gray-200 hover:border-teal-300'
+                          ? 'border-yellow-600 bg-yellow-50'
+                          : 'border-gray-200 hover:border-yellow-300'
                       }`}
                     >
                       <h3 className="font-semibold text-gray-900">{service.name}</h3>
@@ -290,7 +290,7 @@ const handleSubmit = () => {
                         onClick={() => updateBookingData({ duration })}
                         className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                           bookingData.duration === duration
-                            ? 'bg-teal-600 text-white'
+                            ? 'bg-yellow-600 text-white'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                         }`}
                       >
@@ -312,8 +312,8 @@ const handleSubmit = () => {
                       onClick={() => updateBookingData({ masseuse })}
                       className={`border-2 rounded-lg p-4 cursor-pointer transition-all duration-200 ${
                         bookingData.masseuse?.id === masseuse.id
-                          ? 'border-teal-600 bg-teal-50'
-                          : 'border-gray-200 hover:border-teal-300'
+                          ? 'border-yellow-600 bg-yellow-50'
+                          : 'border-gray-200 hover:border-yellow-300'
                       }`}
                     >
                       <div className="flex items-center space-x-3">
@@ -350,7 +350,7 @@ const handleSubmit = () => {
                     value={bookingData.location}
                     onChange={(e) => updateBookingData({ location: e.target.value })}
                     placeholder="Enter your address or preferred location"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     rows={3}
                   />
                   {errors.location && <p className="text-red-600 text-sm mt-1">{errors.location}</p>}
@@ -366,7 +366,7 @@ const handleSubmit = () => {
                     value={bookingData.preferredDate}
                     onChange={(e) => updateBookingData({ preferredDate: e.target.value })}
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                   />
                   {errors.preferredDate && <p className="text-red-600 text-sm mt-1">{errors.preferredDate}</p>}
                   
@@ -377,7 +377,7 @@ const handleSubmit = () => {
                   <select
                     value={bookingData.preferredTime}
                     onChange={(e) => updateBookingData({ preferredTime: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                   >
                     <option value="">Select time</option>
                     <option value="9:00 AM">9:00 AM</option>
@@ -407,7 +407,7 @@ const handleSubmit = () => {
                   value={bookingData.customOffer}
                   onChange={(e) => updateBookingData({ customOffer: parseInt(e.target.value) || 0 })}
                   placeholder="Enter your offer amount"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
                 {bookingData.massageType && bookingData.duration && (
                   <p className="text-sm text-gray-600 mt-1">Typical range: $120 - $2000 </p>
@@ -423,7 +423,7 @@ const handleSubmit = () => {
                   value={bookingData.specialRequests}
                   onChange={(e) => updateBookingData({ specialRequests: e.target.value })}
                   placeholder="Any special requests or preferences?"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                   rows={3}
                 />
               </div>
@@ -446,7 +446,7 @@ const handleSubmit = () => {
                     value={bookingData.customerName}
                     onChange={(e) => updateBookingData({ customerName: e.target.value })}
                     placeholder="Enter your full name"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                   />
                   {errors.customerName && <p className="text-red-600 text-sm mt-1">{errors.customerName}</p>}
                 </div>
@@ -460,8 +460,8 @@ const handleSubmit = () => {
                     type="tel"
                     value={bookingData.customerPhone}
                     onChange={(e) => updateBookingData({ customerPhone: e.target.value })}
-                    placeholder="+234 (0) 800 000 0000"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    placeholder="+1 800 000 0000"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                   />
                   {errors.customerPhone && <p className="text-red-600 text-sm mt-1">{errors.customerPhone}</p>}
                 </div>
@@ -477,7 +477,7 @@ const handleSubmit = () => {
                   value={bookingData.customerEmail}
                   onChange={(e) => updateBookingData({ customerEmail: e.target.value })}
                   placeholder="your.email@example.com"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
                 {errors.customerEmail && <p className="text-red-600 text-sm mt-1">{errors.customerEmail}</p>}
               </div>
@@ -502,7 +502,7 @@ const handleSubmit = () => {
                     <span>Date & Time:</span>
                     <span className="font-medium">{bookingData.preferredDate} at {bookingData.preferredTime}</span>
                   </div>
-                  <div className="flex justify-between font-semibold text-teal-600">
+                  <div className="flex justify-between font-semibold text-yellow-600">
                     <span>Your Offer:</span>
                     <span>${bookingData.customOffer.toLocaleString()}</span>
                   </div>
@@ -523,7 +523,7 @@ const handleSubmit = () => {
             
             <button
               onClick={handleNext}
-              className="flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+              className="flex items-center px-6 py-3 bg-yellow-600 text-white rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-200"
             >
               {currentStep === 3 ? 'Confirm Booking' : 'Next'}
               {currentStep < 3 && <ArrowRight className="h-4 w-4 ml-2" />}

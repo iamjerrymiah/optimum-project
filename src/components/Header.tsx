@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import logo from '../assets/logo-no-background.png'
 
 const Header: React.FC = () => {
   const navigate = useNavigate()
@@ -21,8 +22,14 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center cursor-pointer">
-            <Zap className="h-8 w-8 text-teal-600 mr-2" />
-            <span className="text-2xl font-bold text-gray-900">ZenTouch</span>
+            {/* <Zap className="h-8 w-8 text-yellow-600 mr-2" />
+            <span className="text-2xl font-bold text-gray-900">ZenTouch</span> */}
+            <img 
+              src={logo}
+              alt=""
+              width={'130px'}
+              // height={'80px'}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,8 +42,8 @@ const Header: React.FC = () => {
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                       isActive
-                        ? "text-teal-600 bg-teal-50"
-                        : "text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                        ? "text-yellow-600 bg-yellow-50"
+                        : "text-gray-700 hover:text-yellow-600 hover:bg-gray-50"
                     }`
                   }
                 >
@@ -49,7 +56,7 @@ const Header: React.FC = () => {
           {/* Book Now Button */}
           <Link
             to="/booking"
-            className="hidden md:block bg-teal-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+            className="hidden md:block bg-gray-500 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200"
           >
             Book Now
           </Link>
@@ -58,7 +65,7 @@ const Header: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-teal-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-yellow-600 transition-colors duration-200"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -78,8 +85,8 @@ const Header: React.FC = () => {
                 className={({ isActive }) =>
                   `block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-200 ${
                     isActive
-                      ? "text-teal-600 bg-teal-50"
-                      : "text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                      ? "text-gray-500 bg-yellow-50"
+                      : "text-gray-700 hover:text-gray-500 hover:bg-gray-50"
                   }`
                 }
               >
@@ -89,7 +96,7 @@ const Header: React.FC = () => {
 
             <div
               onClick={() => navigate("/booking")}
-              className="block w-full bg-teal-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-teal-700 transition-colors duration-200"
+              className="block w-full bg-gray-500 text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
             >
               Book Now
             </div>

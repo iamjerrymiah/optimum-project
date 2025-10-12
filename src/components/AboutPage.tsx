@@ -54,14 +54,14 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
 
 
         {/* Key Features */}
-        <div className="bg-gradient-to-br from-teal-50 to-purple-50 rounded-2xl p-8 lg:p-12 mb-16">
+        <div className="bg-gradient-to-br from-yellow-50 to-purple-50 rounded-2xl p-8 lg:p-12 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Why Choose ZenTouch?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex items-start space-x-4">
-              <div className="bg-teal-600 p-2 rounded-lg">
+              <div className="bg-yellow-600 p-2 rounded-lg">
                 <Award className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -71,7 +71,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="bg-purple-600 p-2 rounded-lg">
+              <div className="bg-gray-600 p-2 rounded-lg">
                 <Clock className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -133,11 +133,11 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-teal-400 mb-2">5000+</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">5000+</div>
               <div className="text-gray-300">Happy Clients</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-4xl font-bold text-gray-400 mb-2">50+</div>
               <div className="text-gray-300">Professional Therapists</div>
             </div>
             <div>
@@ -154,8 +154,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
         {/* Mission & Values */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-            <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Heart className="h-8 w-8 text-teal-600" />
+            <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Heart className="h-8 w-8 text-yellow-600" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
             <p className="text-gray-600 leading-relaxed">
@@ -164,8 +164,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Shield className="h-8 w-8 text-purple-600" />
+            <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Shield className="h-8 w-8 text-gray-600" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Our Promise</h3>
             <p className="text-gray-600 leading-relaxed">
@@ -197,7 +197,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
                 className="w-24 h-24 object-cover rounded-full mx-auto mb-4"
               />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Dr. Adebayo Johnson</h3>
-              <p className="text-teal-600 font-semibold mb-3">Founder & CEO</p>
+              <p className="text-yellow-600 font-semibold mb-3">Founder & CEO</p>
               <p className="text-gray-600 text-sm">
                 Former wellness center director with 15+ years experience in healthcare and massage therapy administration.
               </p>
@@ -210,7 +210,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
                 className="w-24 h-24 object-cover rounded-full mx-auto mb-4"
               />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Sarah Okafor</h3>
-              <p className="text-purple-600 font-semibold mb-3">Chief Operations Officer</p>
+              <p className="text-gray-600 font-semibold mb-3">Chief Operations Officer</p>
               <p className="text-gray-600 text-sm">
                 Licensed massage therapist and operations expert, ensuring quality standards across all our services.
               </p>
@@ -231,7 +231,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           </div>
         </div> */}
 
-        {/* <div className="bg-gradient-to-r from-teal-600 to-purple-600 rounded-2xl text-white text-center p-8 lg:p-12">
+        {/* <div className="bg-gradient-to-r from-yellow-600 to-gray-600 rounded-2xl text-white text-center p-8 lg:p-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Experience ZenTouch?</h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
             Join thousands of satisfied clients who have discovered the convenience and quality of our massage services.
@@ -239,13 +239,13 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => onPageChange('booking')}
-              className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="bg-white text-yellow-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Book Your First Session
             </button>
             <button
               onClick={() => onPageChange('masseuses')}
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors duration-200"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-yellow-600 transition-colors duration-200"
             >
               Meet Our Therapists
             </button>

@@ -61,7 +61,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={() => onPageChange('home')}
-              className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+              className="bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-200"
             >
               Back to Home
             </button>
@@ -76,7 +76,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                   message: ''
                 });
               }}
-              className="border-2 border-teal-600 text-teal-600 px-6 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors duration-200"
+              className="border-2 border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 hover:text-white transition-colors duration-200"
             >
               Send Another Message
             </button>
@@ -108,20 +108,20 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-teal-100 p-3 rounded-lg">
-                    <Phone className="h-6 w-6 text-teal-600" />
+                  <div className="bg-yellow-100 p-3 rounded-lg">
+                    <Phone className="h-6 w-6 text-yellow-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+234 (0) 803 123 4567</p>
-                    <p className="text-gray-600">+234 (0) 806 765 4321</p>
+                    <p className="text-gray-600">1 803 123 4567</p>
+                    <p className="text-gray-600">+1 806 765 4321</p>
                     <p className="text-sm text-gray-500 mt-1">Available 24/7</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-purple-100 p-3 rounded-lg">
-                    <Mail className="h-6 w-6 text-purple-600" />
+                  <div className="bg-gray-100 p-3 rounded-lg">
+                    <Mail className="h-6 w-6 text-gray-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
@@ -158,7 +158,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
             </div>
 
             {/* Quick Actions */}
-            <div className="bg-gradient-to-br from-teal-600 to-purple-600 rounded-xl text-white p-6">
+            <div className="bg-gradient-to-br from-yellow-600 to-gray-600 rounded-xl text-white p-6">
               <h3 className="text-xl font-bold mb-4">Need Immediate Help?</h3>
               <p className="text-sm mb-6 opacity-90">
                 For urgent booking assistance or immediate support, call us directly or start your booking online.
@@ -166,13 +166,13 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
               <div className="space-y-3">
                 <button
                   onClick={() => onPageChange('booking')}
-                  className="w-full bg-white text-teal-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                  className="w-full bg-white text-yellow-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                 >
                   Book Now
                 </button>
                 <button
                   onClick={() => onPageChange('faq')}
-                  className="w-full border-2 border-white text-white py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors duration-200"
+                  className="w-full border-2 border-white text-white py-3 rounded-lg font-semibold hover:bg-white hover:text-yellow-600 transition-colors duration-200"
                 >
                   View FAQ
                 </button>
@@ -184,7 +184,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
           {/* <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-lg p-8">
               <div className="flex items-center mb-6">
-                <MessageSquare className="h-6 w-6 text-teal-600 mr-3" />
+                <MessageSquare className="h-6 w-6 text-yellow-600 mr-3" />
                 <h2 className="text-2xl font-bold text-gray-900">Send us a Message</h2>
               </div>
 
@@ -200,7 +200,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Enter your full name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                     />
                     {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
                   </div>
@@ -215,7 +215,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="your.email@example.com"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                     />
                     {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
                   </div>
@@ -231,8 +231,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+234 (0) 800 000 0000"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      placeholder="+1 800 000 0000"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                     />
                     {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
                   </div>
@@ -245,7 +245,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                     >
                       <option value="">Select a subject</option>
                       <option value="booking-inquiry">Booking Inquiry</option>
@@ -270,7 +270,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                     onChange={handleInputChange}
                     placeholder="Please provide as much detail as possible about your inquiry..."
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-vertical"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent resize-vertical"
                   />
                   {errors.message && <p className="text-red-600 text-sm mt-1">{errors.message}</p>}
                 </div>
@@ -284,7 +284,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
 
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200 flex items-center justify-center"
+                  className="w-full bg-yellow-600 text-white py-4 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-200 flex items-center justify-center"
                 >
                   <Send className="h-5 w-5 mr-2" />
                   Send Message
@@ -319,8 +319,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Phone className="h-8 w-8 text-purple-600" />
+            <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Phone className="h-8 w-8 text-gray-600" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">24/7 Booking</h3>
             <p className="text-gray-600 text-sm">

@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import MassageTypesPage from "./components/MassageTypesPage";
-import MasseusesPage from "./components/MasseusesPage";
+// import MasseusesPage from "./components/MasseusesPage";
 import BookingPage from "./components/BookingPage";
 // import AboutPage from "./components/AboutPage";
 // import FAQPage from "./components/FAQPage";
@@ -16,8 +16,8 @@ import BookModel from "./components/BookModel";
 function BookingWrapper({
   selectedMasseuse,
   selectedService,
-  setSelectedMasseuse,
-  setSelectedService,
+  // setSelectedMasseuse,
+  // setSelectedService,
 }: {
   selectedMasseuse: Masseuse | undefined;
   selectedService: MassageType | undefined;

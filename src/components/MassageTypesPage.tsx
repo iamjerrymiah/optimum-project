@@ -24,8 +24,8 @@ const MassageTypesPage: React.FC = () => {
               onClick={() => setSelectedDuration(null)}
               className={`px-4 py-2 rounded-md font-medium transition-colors ${
                 selectedDuration === null
-                  ? "bg-teal-600 text-white"
-                  : "text-gray-600 hover:text-teal-600"
+                  ? "bg-gray-500 text-white"
+                  : "text-gray-600 hover:text-gray-500"
               }`}
             >
               All Durations
@@ -36,8 +36,8 @@ const MassageTypesPage: React.FC = () => {
                 onClick={() => setSelectedDuration(duration)}
                 className={`px-4 py-2 rounded-md font-medium transition-colors ${
                   selectedDuration === duration
-                    ? "bg-teal-600 text-white"
-                    : "text-gray-600 hover:text-teal-600"
+                    ? "bg-gray-500 text-white"
+                    : "text-gray-600 hover:text-gray-500"
                 }`}
               >
                 {duration} min
@@ -96,7 +96,7 @@ const MassageTypesPage: React.FC = () => {
                               <Clock className="h-4 w-4 text-gray-400 mr-2" />
                               <span>{duration} minutes</span>
                             </div>
-                            <span className="font-semibold text-teal-600">
+                            <span className="font-semibold text-yellow-600">
                               $
                               {service.priceRanges[duration]?.min.toLocaleString()}{" "}
                               - $
@@ -109,7 +109,7 @@ const MassageTypesPage: React.FC = () => {
 
                     <button
                       onClick={() => handleBookNow(service)}
-                      className="w-full md:w-[200px] bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200 flex items-center justify-center group"
+                      className="w-full md:w-[200px] bg-gray-500 text-white py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center group"
                     >
                       Book This Service
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

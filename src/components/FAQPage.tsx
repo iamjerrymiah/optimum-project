@@ -53,7 +53,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ }) => {
             placeholder="Search frequently asked questions..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm"
+            className="w-full pl-12 pr-4 py-4 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent shadow-sm"
           />
         </div> */}
 
@@ -69,7 +69,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ }) => {
                   {item.question}
                 </h3>
                 {openItems.has(index) ? (
-                  <ChevronUp className="h-5 w-5 text-teal-600 flex-shrink-0" />
+                  <ChevronUp className="h-5 w-5 text-yellow-600 flex-shrink-0" />
                 ) : (
                   <ChevronDown className="h-5 w-5 text-gray-400 flex-shrink-0" />
                 )}
@@ -96,7 +96,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ }) => {
               </p>
               <button
                 onClick={() => setSearchTerm('')}
-                className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-200"
               >
                 Clear Search
               </button>
@@ -109,28 +109,28 @@ const FAQPage: React.FC<FAQPageProps> = ({ }) => {
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Actions</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="h-8 w-8 text-teal-600" />
+              <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageCircle className="h-8 w-8 text-yellow-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Start Booking</h3>
               <p className="text-gray-600 text-sm mb-4">Ready to book your massage? Start the booking process now.</p>
               <button
                 onClick={() => navigate('/booking')}
-                className="bg-teal-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-200"
+                className="bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors duration-200"
               >
                 Book Now
               </button>
             </div>
 
             <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="h-8 w-8 text-purple-600" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="h-8 w-8 text-gray-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Browse Services</h3>
               <p className="text-gray-600 text-sm mb-4">Explore our comprehensive massage service offerings.</p>
               <button
                 onClick={() => navigate('/book-xxx')}
-                className="bg-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-purple-700 transition-colors duration-200"
+                className="bg-gray-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-700 transition-colors duration-200"
               >
                 View Services
               </button>
@@ -153,7 +153,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ }) => {
         </div>
 
         {/* Popular Topics */}
-        <div className="bg-gradient-to-br from-teal-50 to-purple-50 rounded-xl p-8">
+        <div className="bg-gradient-to-br from-yellow-50 to-gray-50 rounded-xl p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Topics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow duration-200">
@@ -177,14 +177,14 @@ const FAQPage: React.FC<FAQPageProps> = ({ }) => {
 
         {/* Contact CTA */}
         {/* <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-teal-600 to-purple-600 rounded-xl text-white p-8">
+          <div className="bg-gradient-to-r from-yellow-600 to-gray-600 rounded-xl text-white p-8">
             <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
             <p className="text-lg mb-6 opacity-90">
               Our customer support team is here to help with any questions or concerns you may have.
             </p>
             <button
               onClick={() => onPageChange('contact')}
-              className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="bg-white text-yellow-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Contact Support
             </button>

@@ -60,7 +60,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
                 placeholder="Search by name or specialty..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               />
             </div>
 
@@ -76,7 +76,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
               <select
                 value={genderFilter}
                 onChange={(e) => setGenderFilter(e.target.value as 'All' | 'Male' | 'Female')}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               >
                 <option value="All">All Genders</option>
                 <option value="Male">Male</option>
@@ -86,7 +86,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
               <select
                 value={specialtyFilter}
                 onChange={(e) => setSpecialtyFilter(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               >
                 <option value="All">All Specialties</option>
                 {allSpecialties.map(specialty => (
@@ -97,7 +97,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
               <select
                 value={availabilityFilter}
                 onChange={(e) => setAvailabilityFilter(e.target.value as 'All' | 'Available' | 'Busy')}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               >
                 <option value="All">All Status</option>
                 <option value="Available">Available</option>
@@ -112,7 +112,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
                 <select
                   value={genderFilter}
                   onChange={(e) => setGenderFilter(e.target.value as 'All' | 'Male' | 'Female')}
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   <option value="All">All Genders</option>
                   <option value="Male">Male</option>
@@ -122,7 +122,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
                 <select
                   value={specialtyFilter}
                   onChange={(e) => setSpecialtyFilter(e.target.value)}
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   <option value="All">All Specialties</option>
                   {allSpecialties.map(specialty => (
@@ -133,7 +133,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
                 <select
                   value={availabilityFilter}
                   onChange={(e) => setAvailabilityFilter(e.target.value as 'All' | 'Available' | 'Busy')}
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   <option value="All">All Status</option>
                   <option value="Available">Available</option>
@@ -158,7 +158,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
                 <img 
                   src={masseuse.photo} 
                   alt={masseuse.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-[400px] object-cover"
                 />
                 <div className="absolute top-4 right-4">
                   {/* <div className={`w-4 h-4 rounded-full border-2 border-white ${
@@ -201,7 +201,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
                   <p className="text-sm font-semibold text-gray-900 mb-2">Specialties:</p>
                   <div className="flex flex-wrap gap-1">
                     {masseuse.specialties.map((specialty) => (
-                      <span key={specialty} className="bg-teal-100 text-teal-700 px-2 py-1 rounded-full text-xs">
+                      <span key={specialty} className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full text-xs">
                         {specialty}
                       </span>
                     ))}
@@ -224,7 +224,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
                   disabled={!masseuse.isAvailable}
                   className={`w-full py-3 rounded-lg font-semibold transition-colors duration-200 ${
                     masseuse.isAvailable
-                      ? 'bg-teal-600 text-white hover:bg-teal-700'
+                      ? 'bg-yellow-600 text-white hover:bg-yellow-700'
                       : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                   }`}
                 >
@@ -249,7 +249,7 @@ const MasseusesPage: React.FC<MasseusesPageProps> = ({ onPageChange, onMasseuseS
                   setAvailabilityFilter('All');
                   setSpecialtyFilter('All');
                 }}
-                className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-200"
               >
                 Clear All Filters
               </button>

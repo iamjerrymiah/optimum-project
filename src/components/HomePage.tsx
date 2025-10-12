@@ -15,8 +15,8 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({  }) => {
-  const featuredServices = massageTypes.slice(0, 4);
-  const topMasseuses = masseuses.filter(m => m.isAvailable && m.rating >= 4.8).slice(0, 3);
+  // const featuredServices = massageTypes.slice(0, 4);
+  // const topMasseuses = masseuses.filter(m => m.isAvailable && m.rating >= 4.8).slice(0, 3);
 
   const navigate = useNavigate()
   
@@ -24,29 +24,29 @@ const HomePage: React.FC<HomePageProps> = ({  }) => {
   return (
     <div className="container mx-auto">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-50 to-blue-50 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-yellow-200 to-black py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Premium Massage
-                <span className="text-teal-600 block">Therapy Services</span>
+                <span className="text-white block">Therapy Services</span>
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Connect with certified professional masseuses for personalized relaxation and wellness treatments. 
                 Book your perfect massage experience today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
                   onClick={() => navigate('/booking')}
-                  className="bg-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-teal-700 transition-all duration-200 flex items-center justify-center group"
+                  className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center group"
                 >
                   Book Now
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button
                   onClick={() => navigate('/book-xxx')}
-                  className="border-2 border-teal-600 text-teal-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-all duration-200"
+                  className="border-2 border-yellow-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-yellow-600 hover:text-white transition-all duration-200"
                 >
                   View Services
                 </button>
@@ -75,15 +75,15 @@ const HomePage: React.FC<HomePageProps> = ({  }) => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-3 sm:space-y-4">
-              <div className="bg-teal-100 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto">
-                <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-teal-600" />
+              <div className="bg-yellow-100 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto">
+                <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-600" />
               </div>
               <h3 className="font-semibold text-base sm:text-lg">Licensed Professionals</h3>
               <p className="text-gray-600 text-sm">All masseuses are certified and licensed</p>
             </div>
             <div className="text-center space-y-3 sm:space-y-4">
-              <div className="bg-purple-100 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto">
-                <Clock className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600" />
+              <div className="bg-gray-100 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto">
+                <Clock className="h-6 w-6 sm:h-8 sm:w-8 text-gray-600" />
               </div>
               <h3 className="font-semibold text-base sm:text-lg">Flexible Scheduling</h3>
               <p className="text-gray-600 text-sm">Book at your preferred time and location</p>
@@ -144,7 +144,7 @@ const HomePage: React.FC<HomePageProps> = ({  }) => {
       </div>
     </div>
 
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-teal-600 to-purple-600 text-white">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-600 to-gray-600 text-white">
         <div className="max-w-3xl sm:max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
             {/* Ready to Experience Ultimate Relaxation? */}
@@ -157,7 +157,7 @@ const HomePage: React.FC<HomePageProps> = ({  }) => {
           <button
             // onClick={() => onPageChange('booking')}
             onClick={() => {navigate('/book-xxx')}}
-            className="bg-white text-teal-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center"
+            className="bg-white text-yellow-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center"
           >
             {/* Start Booking Process */}
             Book Now

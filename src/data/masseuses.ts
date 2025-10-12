@@ -12,14 +12,14 @@ import barbie from '../assets/barbie.jpg'
 import lotusbomb from '../assets/lotusbombb.jpg'
 import courtney from '../assets/courtney.jpg'
 
-import masseuse1 from '../assets/masseus1.jpg'
-import masseus2 from '../assets/masseus2.jpg'
-import masseus3 from '../assets/masseus3.jpg'
+import masseuse1 from '../assets/masseus10.jpg'
+import masseus2 from '../assets/masseus11.jpg'
+import masseus3 from '../assets/masseus12.jpg'
 
 export const masseuses: Masseuse[] = [
   {
     id: '2',
-    name: 'Sarah',
+    name: 'D Mira',
     // photo: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400',
     photo: masseuse1,
     bio: 'Traditional Thai massage master with over 10 years of experience. Trained in Bangkok and specializes in authentic Thai massage techniques and sports therapy.',
@@ -33,7 +33,7 @@ export const masseuses: Masseuse[] = [
   },
   {
     id: '3',
-    name: 'Emily',
+    name: 'Gianna Kissa',
     // photo: 'https://images.pexels.com/photos/4173258/pexels-photo-4173258.jpeg?auto=compress&cs=tinysrgb&w=400',
     photo: masseus2,
     bio: 'Holistic wellness practitioner combining massage therapy with aromatherapy expertise. Specializes in stress relief and relaxation techniques for busy professionals.',
@@ -47,7 +47,7 @@ export const masseuses: Masseuse[] = [
   },
   {
     id: '5',
-    name: 'Lisa',
+    name: 'Salt Sahit',
     // photo: 'https://images.pexels.com/photos/4173240/pexels-photo-4173240.jpeg?auto=compress&cs=tinysrgb&w=400',
     photo: masseus3,
     bio: 'Experienced massage therapist specializing in relaxation and therapeutic massage. Known for her gentle touch and ability to create a peaceful, healing environment.',

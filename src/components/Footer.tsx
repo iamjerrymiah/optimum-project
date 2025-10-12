@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Zap, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import PrivacyModal from './PrivacyModal';
+import logo from '../assets/logo-no-background.png'
 
 const Footer: React.FC = () => {
   const [showPrivacy, setShowPrivacy] = useState(false);
@@ -11,8 +12,14 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <Zap className="h-8 w-8 text-teal-400 mr-2" />
-              <span className="text-2xl font-bold">ZenTouch</span>
+              {/* <Zap className="h-8 w-8 text-yellow-400 mr-2" />
+              <span className="text-2xl font-bold">ZenTouch</span> */}
+              <img 
+                src={logo}
+                alt=""
+                width={'200px'}
+                // height={'80px'}
+              />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Your premier destination for professional massage therapy services. 
@@ -25,15 +32,15 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center">
-                <Mail className="h-4 w-4 text-teal-400 mr-3 flex-shrink-0" />
+                <Mail className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0" />
                 <span className="text-gray-300">Zentouch.us@outlook.com</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 text-teal-400 mr-3 flex-shrink-0" />
+                <Mail className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0" />
                 <span className="text-gray-300">Zentouch.canada@outlook.com</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 text-teal-400 mr-3 flex-shrink-0" />
+                <Mail className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0" />
                 <span className="text-gray-300">Zentouch.au@outlook.com</span>
               </div>
             </div>
@@ -49,7 +56,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Service Hours</h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center">
-                <Clock className="h-4 w-4 text-teal-400 mr-3 flex-shrink-0" />
+                <Clock className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0" />
                 <div>
                   <div className="text-gray-300">Mon - Fri: 8:00 AM - 10:00 PM</div>
                   <div className="text-gray-300">Sat - Sun: 9:00 AM - 9:00 PM</div>
@@ -72,9 +79,9 @@ const Footer: React.FC = () => {
               © 2020 ZenTouch. All rights reserved.
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              {/* <div onClick={() => setShowPrivacy(true)} className="text-sm text-gray-300 hover:text-teal-400 transition-colors">Privacy Policy</div> */}
-              <div onClick={() => setShowPrivacy(true)} className="text-sm cursor-pointer text-gray-300 hover:text-teal-400 transition-colors">Terms of Service</div>
-              {/* <a href="#" className="text-sm text-gray-300 hover:text-teal-400 transition-colors">Cancellation Policy</a> */}
+              {/* <div onClick={() => setShowPrivacy(true)} className="text-sm text-gray-300 hover:text-yellow-400 transition-colors">Privacy Policy</div> */}
+              <div onClick={() => setShowPrivacy(true)} className="text-sm cursor-pointer text-gray-300 hover:text-yellow-400 transition-colors">Terms of Service</div>
+              {/* <a href="#" className="text-sm text-gray-300 hover:text-yellow-400 transition-colors">Cancellation Policy</a> */}
             </div>
           </div>
         </div>

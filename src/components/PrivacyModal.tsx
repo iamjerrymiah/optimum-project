@@ -64,7 +64,7 @@ const PrivacyModal: React.FC<PrivacyModalProps> = ({
           </button>
           <button
             onClick={onAgree}
-            className="px-4 py-2 rounded-lg bg-teal-600 text-white hover:bg-teal-700 transition w-full sm:w-auto"
+            className="px-4 py-2 rounded-lg bg-yellow-600 text-white hover:bg-yellow-700 transition w-full sm:w-auto"
           >
             I Agree
           </button>

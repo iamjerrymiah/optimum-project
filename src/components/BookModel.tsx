@@ -82,12 +82,12 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => navigate('/')}
-              className="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+              className="bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-200"
             >
               Back to Home
             </button>
             <button
-              className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors duration-200"
+              className="border-2 border-yellow-600 text-yellow-600 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-600 hover:text-white transition-colors duration-200"
               onClick={() => {
                 navigator.clipboard.writeText(bookingMessage);
                 alert("Booking details copied! Paste it into the live chat to get instant reply.");
@@ -132,7 +132,7 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
                   value={data.name}
                   onChange={(e) => updateBookingData({ name: e.target.value })}
                   placeholder="Enter your full name"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
                 {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
               </div>
@@ -144,7 +144,7 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
                   value={data.modelName}
                   onChange={(e) => updateBookingData({ modelName: e.target.value })}
                   placeholder="Enter your full name"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
                 {errors.modelName && <p className="text-red-600 text-sm mt-1">{errors.modelName}</p>}
               </div>
@@ -157,7 +157,7 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
                   value={data.number}
                   onChange={(e) => updateBookingData({ number: e.target.value })}
                   placeholder="Enter your number"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
                 {errors.number && <p className="text-red-600 text-sm mt-1">{errors.number}</p>}
               </div>
@@ -171,7 +171,7 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
                   value={data.customOffer}
                   onChange={(e) => updateBookingData({ customOffer: parseInt(e.target.value) || 0 })}
                   placeholder="Enter your offer amount"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
                 {errors.customOffer && <p className="text-red-600 text-sm mt-1">{errors.customOffer}</p>}
               </div>
@@ -190,7 +190,7 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
             <button
               onClick={()=> {setShowPrivacy(true)}}
               disabled={!data.name || !data.modelName || !data.number || !data.customOffer}
-              className="flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold disabled:bg-teal-200 hover:bg-teal-700 transition-colors duration-200"
+              className="flex items-center px-6 py-3 bg-yellow-600 text-white rounded-lg font-semibold disabled:bg-yellow-200 hover:bg-yellow-700 transition-colors duration-200"
             >
               {'Confirm Book'}
               <ArrowRight className="h-4 w-4 ml-2" />
@@ -236,7 +236,7 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
                   setAvailabilityFilter('All');
                   setSpecialtyFilter('All');
                 }}
-                className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors duration-200"
               >
                 Clear All Filters
               </button>
