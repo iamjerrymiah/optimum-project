@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail } from 'lucide-react';
 import PrivacyModal from './PrivacyModal';
-import logo from '../assets/logo-no-background.png'
+import logo from '../assets/logo.jpg'
 
 const Footer: React.FC = () => {
   const [showPrivacy, setShowPrivacy] = useState(false);
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               {/* <Zap className="h-8 w-8 text-yellow-400 mr-2" />
-              <span className="text-2xl font-bold">ZenTouch</span> */}
+              <span className="text-2xl font-bold">SensationalMeet</span> */}
               <img 
                 src={logo}
                 alt=""
@@ -33,15 +33,15 @@ const Footer: React.FC = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center">
                 <Mail className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">Zentouch.us@outlook.com</span>
+                <span className="text-gray-300">sensationalmeet.us@hotmail.com</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">Zentouch.canada@outlook.com</span>
+                <span className="text-gray-300">sensationalmeet.canada@hotmail.com</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">Zentouch.au@outlook.com</span>
+                <span className="text-gray-300">sensationalmeet.au@hotmail.com</span>
               </div>
             </div>
             <div className="mt-4">
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-300">
-              © 2020 ZenTouch. All rights reserved.
+              © 2020 SensationalMeet. All rights reserved.
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {/* <div onClick={() => setShowPrivacy(true)} className="text-sm text-gray-300 hover:text-yellow-400 transition-colors">Privacy Policy</div> */}

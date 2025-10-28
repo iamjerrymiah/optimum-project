@@ -12,7 +12,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
         
         {/* <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            About ZenTouch
+            About SensationalMeet
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We're passionate about connecting you with exceptional massage therapists 
@@ -34,7 +34,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2020, ZenTouch emerged from a simple yet powerful vision: 
+                  Founded in 2020, SensationalMeet emerged from a simple yet powerful vision: 
                   making professional massage therapy accessible to everyone, anywhere, anytime.
                 </p>
                 <p>
@@ -56,7 +56,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
         {/* Key Features */}
         <div className="bg-gradient-to-br from-yellow-50 to-purple-50 rounded-2xl p-8 lg:p-12 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Why Choose ZenTouch?
+            Why Choose SensationalMeet?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -232,7 +232,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
         </div> */}
 
         {/* <div className="bg-gradient-to-r from-yellow-600 to-gray-600 rounded-2xl text-white text-center p-8 lg:p-12">
-          <h2 className="text-3xl font-bold mb-4">Ready to Experience ZenTouch?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Experience SensationalMeet?</h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
             Join thousands of satisfied clients who have discovered the convenience and quality of our massage services.
           </p>

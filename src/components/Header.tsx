@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import logo from '../assets/logo-no-background.png'
+import logo from '../assets/logo.jpg'
 
 const Header: React.FC = () => {
   const navigate = useNavigate()
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center cursor-pointer">
             {/* <Zap className="h-8 w-8 text-yellow-600 mr-2" />
-            <span className="text-2xl font-bold text-gray-900">ZenTouch</span> */}
+            <span className="text-2xl font-bold text-gray-900">SensationalMeet</span> */}
             <img 
               src={logo}
               alt=""

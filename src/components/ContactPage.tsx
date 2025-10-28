@@ -125,8 +125,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@zentouch.ng</p>
-                    <p className="text-gray-600">support@zentouch.ng</p>
+                    <p className="text-gray-600">info@SensationalMeet.ng</p>
+                    <p className="text-gray-600">support@SensationalMeet.ng</p>
                     <p className="text-sm text-gray-500 mt-1">Response within 24 hours</p>
                   </div>
                 </div>

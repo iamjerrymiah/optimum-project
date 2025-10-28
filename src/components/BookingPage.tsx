@@ -155,7 +155,7 @@ const handleSubmit = () => {
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Booking Confirmed!</h1>
           <p className="text-lg text-gray-600 mb-6">
-            Thank you for your booking request. Zentouch will contact you in the soonest on our live chat to confirm the appointment details.
+            Thank you for your booking request. SensationalMeet will contact you in the soonest on our live chat to confirm the appointment details.
           </p>
           
           {/* <div className="bg-gray-50 rounded-lg p-6 mb-6 text-left">
