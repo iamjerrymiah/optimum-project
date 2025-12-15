@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import logo from '../assets/logo.jpg'
+import logo from '../assets/newLogo.jpeg'
 
 const Header: React.FC = () => {
   const navigate = useNavigate()
@@ -27,8 +27,8 @@ const Header: React.FC = () => {
             <img 
               src={logo}
               alt=""
-              width={'130px'}
-              // height={'80px'}
+              width={'150px'}
+              height={'150px'}
             />
           </Link>
 

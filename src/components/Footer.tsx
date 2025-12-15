@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail } from 'lucide-react';
 import PrivacyModal from './PrivacyModal';
-import logo from '../assets/logo.jpg'
+import logo from '../assets/newLogo.jpeg'
 
 const Footer: React.FC = () => {
   const [showPrivacy, setShowPrivacy] = useState(false);
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                 src={logo}
                 alt=""
                 width={'200px'}
-                // height={'80px'}
+                height={'200px'}
               />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
