@@ -28,7 +28,7 @@ const Header: React.FC = () => {
               src={logo}
               alt=""
               width={'150px'}
-              height={'150px'}
+              height={'200px'}
             />
           </Link>
 

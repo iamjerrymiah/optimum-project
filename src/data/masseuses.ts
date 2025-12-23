@@ -1,6 +1,6 @@
 import { Masseuse } from '../types';
 import sarajay from '../assets/sarajay.jpg'
-import xexpisode from '../assets/xepisode.jpg'
+// import xexpisode from '../assets/xepisode.jpg'
 import cora from '../assets/cora.jpg'
 import saucy from '../assets/saucy.jpg'
 import mio from '../assets/mio.jpg'
@@ -11,15 +11,17 @@ import xviii from '../assets/xvxii.jpg'
 import barbie from '../assets/barbie.jpg'
 import lotusbomb from '../assets/lotusbombb.jpg'
 import courtney from '../assets/courtney.jpg'
+import angelaWhite from '../assets/angelaWhite.jpeg'
+import alexisFawx from '../assets/alexisFaux.jpeg'
 
-import masseuse1 from '../assets/masseus10.jpg'
+import masseuse1 from '../assets/abellaDanger.jpeg'
 import masseus2 from '../assets/masseus11.jpg'
 import masseus3 from '../assets/masseus12.jpg'
 
 export const masseuses: Masseuse[] = [
   {
     id: '2',
-    name: 'D Mira',
+    name: 'Abella Danger',
     // photo: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400',
     photo: masseuse1,
     bio: 'Traditional Thai massage master with over 10 years of experience. Trained in Bangkok and specializes in authentic Thai massage techniques and sports therapy.',
@@ -33,7 +35,7 @@ export const masseuses: Masseuse[] = [
   },
   {
     id: '3',
-    name: 'Gianna Kissa',
+    name: 'Kissa Sins',
     // photo: 'https://images.pexels.com/photos/4173258/pexels-photo-4173258.jpeg?auto=compress&cs=tinysrgb&w=400',
     photo: masseus2,
     bio: 'Holistic wellness practitioner combining massage therapy with aromatherapy expertise. Specializes in stress relief and relaxation techniques for busy professionals.',
@@ -70,13 +72,13 @@ export const pornstars:any = [
   },
   {
     id: '2',
-    name: 'X-Episode',
-    photo: xexpisode
+    name: 'Angela White',
+    photo: angelaWhite
   },
   {
     id: '3',
-    name: 'Cora',
-    photo: cora
+    name: 'Alexis Fawx',
+    photo: alexisFawx
   },
   {
     id: '4',

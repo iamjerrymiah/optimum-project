@@ -405,7 +405,7 @@ const handleSubmit = () => {
                 <input
                   type="number"
                   value={bookingData.customOffer}
-                  onChange={(e) => updateBookingData({ customOffer: parseInt(e.target.value) || 0 })}
+                  onChange={(e) => updateBookingData({ customOffer: parseInt(e.target.value) })}
                   placeholder="Enter your offer amount"
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
