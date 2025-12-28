@@ -73,9 +73,9 @@ const BookModel: React.FC<MasseusesPageProps> = ({ }) => {
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <Check className="h-8 w-8 text-green-600" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Booking Confirmed!</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Almost There!</h1>
           <p className="text-lg text-gray-600 mb-6">
-            Thank you for your booking request. SensationalMeet will contact you in the soonest on our live chat to confirm the appointment details.
+            Thank you for booking. Paste booking ticket in the live chat to make payment and secure your schedule
           </p>
           
           <pre style={{ whiteSpace: "pre-wrap", fontSize: "14px", marginBottom: '30px' }}>{bookingMessage}</pre>

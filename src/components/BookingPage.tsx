@@ -153,9 +153,9 @@ const handleSubmit = () => {
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <Check className="h-8 w-8 text-green-600" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Booking Confirmed!</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Almost There!</h1>
           <p className="text-lg text-gray-600 mb-6">
-            Thank you for your booking request. SensationalMeet will contact you in the soonest on our live chat to confirm the appointment details.
+            Thank you for booking. Paste booking ticket in the live chat to make payment and secure your schedule
           </p>
           
           {/* <div className="bg-gray-50 rounded-lg p-6 mb-6 text-left">
@@ -486,10 +486,10 @@ const handleSubmit = () => {
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="font-semibold text-gray-900 mb-4">Booking Summary</h3>
                 <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
+                  {/* <div className="flex justify-between">
                     <span>Masseuse:</span>
                     <span className="font-medium">{bookingData.masseuse?.name}</span>
-                  </div>
+                  </div> */}
                   <div className="flex justify-between">
                     <span>Service:</span>
                     <span className="font-medium">{bookingData.massageType?.name}</span>
